@@ -1,6 +1,7 @@
 import clockIcon from '../images/clock.svg';
 import emptyFolderIcon from '../images/empty-folder.svg';
 import userIcon from '../images/user.svg';
+import '../styles/Feed.css';
 
 export default function Feed(props) {
   if (props.posts.length === 0) {
@@ -20,8 +21,8 @@ export default function Feed(props) {
     <>
       {/* Esse "<>" é o react fragment, utilizado para que não seja necessário colocar nenhum pai para as tags header e section  */}
       <header>
-        <h1> Seu Feed</h1>
-        <h2>Acompanhe o que seus amigos estão pensando em tempo real</h2>
+        <h1> {props.title} </h1>
+        <h2> {props.subtitle} </h2>
       </header>
 
       <section className="feed">
